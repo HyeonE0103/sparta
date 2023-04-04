@@ -6,11 +6,9 @@
   </head>
   <script>
     function checkResult() {
-      console.log("tq1");
       let fruits = ["사과", "배", "감", "귤", "수박"];
       $("#q1").empty();
       fruits.forEach((a) => {
-        console.log("tq2");
         let temp_html = `<p>${a}</p>`;
         $("#q1").append(temp_html);
       });
