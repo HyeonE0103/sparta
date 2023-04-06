@@ -29,3 +29,21 @@ def sum(a,b,c):
 	return a+b+c
 result = sum(1,2,3)
 print(result) #6
+
+age = 25
+if age > 20:
+	print("성인입니다")
+else:
+	print("청소년입니다")
+	
+fruits = ['사과','배','감','귤']
+for fruit in fruits:
+	print(fruit)  # 사과, 배, 감, 귤
+	
+ages =[5,10,13,23,25,9]
+
+for a in ages:
+	if a>20:
+		print("성인입니다")
+	else:
+		print("청소년입니다")
