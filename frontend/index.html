@@ -98,6 +98,38 @@
           .then((data) => {
             $("#temp").text(data["temp"]);
           });
+        fetch("http://spartacodingclub.shop/web/api/movie")
+          .then((res) => res.json())
+          .then((data) => {
+            let rows = data["movies"];
+            $("#cards").empty();
+            rows.forEach((a) => {
+              let title = a["title"];
+              let desc = a["desc"];
+              let comment = a["comment"];
+              let star = a["star"];
+              let image = a["image"];
+
+              let star_image = "⭐".repeat(star);
+
+              temp_html = `<div class="col">
+                            <div class="card h-100">
+                              <img
+                                src=${image}
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">${title}</h5>
+                                <p class="card-text">${desc}</p>
+                                <p>${star_image}</p>
+                                <p class="mycomment">${comment}</p>
+                              </div>
+                            </div>
+                          </div>`;
+              $("#cards").append(temp_html);
+            });
+          });
       });
     </script>
   </head>
@@ -140,68 +172,8 @@
       </div>
     </div>
     <div class="mycards">
-      <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div id="cards" class="row row-cols-1 row-cols-md-4 g-4">
         <!-- 한줄에 4개씩(row-cols) -->
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">영화제목</h5>
-              <p class="card-text">코멘트</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">나의 의견</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">영화제목</h5>
-              <p class="card-text">코멘트</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">나의 의견</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">영화제목</h5>
-              <p class="card-text">코멘트</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">나의 의견</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">영화제목</h5>
-              <p class="card-text">코멘트</p>
-              <p>⭐⭐⭐</p>
-              <p class="mycomment">나의 의견</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </body>
