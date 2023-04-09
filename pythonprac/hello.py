@@ -1,3 +1,7 @@
+from pymongo import MongoClient
+client = MongoClient('mongodb+srv://sparta:test@cluster0.k3deo2l.mongodb.net/?retryWrites=true&w=majority')
+db = client.dbsparta
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -14,4 +18,9 @@ for movie in movies:
     rank = movie.select_one('.rank_num').text
     rate = movie.select_one('.txt_grade').text
     if title is not None:	# None이 아닐때만
-    	print(rank, title, rate)
+        doc = {
+            'title': title,
+            'rank': rank,
+            'rate': rate
+        }
+        db.movies.insert_one(doc)
