@@ -10,6 +10,8 @@ soup = BeautifulSoup(data.text, 'html.parser')
 movies = soup.select("#mainContent > div > div.box_ranking > ol > li")
 
 for movie in movies:
-    a = movie.select_one('div > div.thumb_cont > strong').text
-    if a is not None:	# None이 아닐때만
-    	print(a)
+    title = movie.select_one('.link_txt').text
+    rank = movie.select_one('.rank_num').text
+    rate = movie.select_one('.txt_grade').text
+    if title is not None:	# None이 아닐때만
+    	print(rank, title, rate)
