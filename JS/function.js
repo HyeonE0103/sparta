@@ -15,3 +15,9 @@ const priceC = 3000;
 const priceD = 4000;
 const avg2 = calculateAvg(priceC, priceD);
 console.log(`두 상품의 평균은 ${avg2}입니다.`);
+
+function calculateAvg2(price1, price2, price3) {
+  const avg = (price1 + price2 + price3) / 3;
+  return avg;
+}
+console.log(`평균가격: ${calculateAvg2(2000, 3000, 4000)}`);
