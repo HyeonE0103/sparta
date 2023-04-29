@@ -69,3 +69,8 @@ domain = myemail.split('@')[1].split('.')[0]
 # 특정문자열로 자르고 싶을때 split('문자열')사용
 print(domain) # sparta
 
+sp = "sparta"
+print(sp[0:3])
+
+phone = "02-123-1234"
+print(phone.split("-")[0])
