@@ -71,3 +71,12 @@ person = {"name":"Bob", "age": 21}
 print("name" in person)       # True
 print("email" in person)      # False
 print("phone" not in person)  # True
+
+#리스트와 딕셔너리의 조합
+people = [{'name': 'bob', 'age': 20}, {'name': 'carry', 'age': 38}]
+# people[0]['name']의 값은? 'bob'
+# people[1]['name']의 값은? 'carry'
+person = {'name': 'john', 'age': 7}
+people.append(person)
+# people의 값은? [{'name':'bob','age':20}, {'name':'carry','age':38}, {'name':'john','age':7}]
+# people[2]['name']의 값은? 'john'
