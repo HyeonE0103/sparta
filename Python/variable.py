@@ -41,3 +41,8 @@ a = 4 > 2  # True
 not a      # False    NOT 연산자로 참을 거짓으로, 거짓을 참으로 바꿔줌
 a and b    # False    AND 연산자로 모두 참이어야 참을 반환
 a or b     # True     OR 연산자로 둘 중 하나만 참이면 참
+
+a = 24
+b = 16
+c = 26
+print((a+b+c)/3)
