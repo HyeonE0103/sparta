@@ -1,4 +1,4 @@
-#리스트 기초
+#리스트 기초, 순서가 있는 다른 자료형들의 모임
 a = [1, 5, 2]
 b = [3, "a", 6, 1]
 c = []
@@ -41,3 +41,33 @@ a = [2, 1, 4, "2", 6]
 print(1 in a)      # True
 print("1" in a)    # False
 print(0 not in a)  # True
+
+#딕셔너리 기초, 키와 밸류의 쌍으로 이루어진 자료의 모임
+person = {"name":"Bob", "age": 21}
+print(person["name"]) # Bob
+
+a = {"one":1, "two":2}
+# 빈 딕셔너리 만들기
+a = {}
+a = dict()
+
+# person = {"name":"Bob", "age": 21} # 딕셔너리는 순서가 없기 때문에 인덱싱X
+# print(person[0])   # 0이라는 key가 없으므로 KeyError 발생!
+
+#딕셔니러의 값을 업데이트하거나 새로운 쌍의 자료 넣기
+person = {"name":"Bob", "age": 21}
+person["name"] = "Robert"
+print(person)  # {'name': 'Robert', 'age': 21}
+person["height"] = 174.8
+print(person)  # {'name': 'Robert', 'age': 21, 'height': 174.8}
+
+#딕셔너리 밸류로는 아무 자료형이나 쓸수 있음
+person = {"name":"Alice", "age": 16, "scores": {"math": 81, "science": 92, "Korean": 84}}
+print(person["scores"])             # {'math': 81, 'science': 92, 'Korean': 84}
+print(person["scores"]["science"])  # 92
+
+#해당 키가 존재하는지 알고 싶을때는 in사용
+person = {"name":"Bob", "age": 21}
+print("name" in person)       # True
+print("email" in person)      # False
+print("phone" not in person)  # True
