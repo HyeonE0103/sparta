@@ -54,3 +54,18 @@ myemail.split('@')[1].split('.')[0]
 #특정 문자를 다른 문자로 바꾸기
 txt = '서울시-마포구-망원동'
 print(txt.replace('-', '>')) # '서울시>마포구>망원동'
+
+#인덱싱과 슬라이싱
+f="abcdefghijklmnopqrstuvwxyz"
+f[1]   # b 파이썬은 숫자를 0부터 셈
+
+f[4:15]  # efghijklmno           f[4]부터 f[15] 전까지, 총 15-4=11개!
+f[8:]    # ijklmnopqrstuvwxyz    f[8]부터 끝까지, 앞의 8개 빼고!
+f[:7]    # abcdefg               시작부터 f[7] 전까지, 앞의 7개!
+f[:]     # abcdefghijklmnopqrstuvwxyz  처음부터 끝까지
+
+myemail = 'abc@sparta.co'
+domain = myemail.split('@')[1].split('.')[0]
+# 특정문자열로 자르고 싶을때 split('문자열')사용
+print(domain) # sparta
+
