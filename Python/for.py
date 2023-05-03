@@ -18,3 +18,11 @@ for human in people:
     if human["age"] > 20:
         print(human["name"])
 
+for i, fruit in enumerate(fruits, start=1):
+    print(i,fruit)
+
+
+for i, fruit in enumerate(fruits):
+    print(i, fruit)
+    if i == 2:
+        break
