@@ -26,3 +26,13 @@ def bus_fee(age):
 
 money = bus_fee(28)
 print(money)
+	
+def check_gender(pin):
+  gender = int(pin.split('-')[1][0])
+  if gender % 2 == 0:
+    print("여자")
+  else:
+	  print("남자")
+
+my_pin = '200101-2012345'
+check_gender(my_pin)
