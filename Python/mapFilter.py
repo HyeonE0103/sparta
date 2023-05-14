@@ -19,5 +19,7 @@ def check_adult(person):
 
 result = map(check_adult, people)
 
-result2 = map(lambda x: ('성인' if x['age'] > 20 else '청소년'), people)
+result = map(lambda x: ('성인' if x['age'] > 20 else '청소년'), people)
+
+result = filter(lambda x: x["age"]>20, people)
 print(list(result))
