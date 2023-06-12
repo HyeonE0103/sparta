@@ -16,3 +16,7 @@ console.log(mySet.has("value2")); // true 출력
 for (const value of mySet.values()) {
   console.log(value);
 }
+
+const str = "hello";
+const arr = [...str];
+console.log(arr);
